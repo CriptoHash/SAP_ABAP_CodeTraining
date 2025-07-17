@@ -15,4 +15,34 @@ Padrão de Nomenclatura
     - Padrão de Codificação. Um padrão quie escreve várias convenções de codificação usadas para implementações inteligíveis, consistentes e com qualidade.
     - O uso de um padrão de codificação é uma prática de desenvolvimento de software extensamente aceita.
 
+Intruções Declarativas
+  - É a intrução que define o tipo de dados e onde serão utilizados.
+    - Com a intrução declarativa, nós declaramos variáveis para nosso programa que podem ser 'locais' ou 'globais'.
+
+Tipo de Dados
+  - No ABAP temos os tipo de dados que define que o tipo de valores uma variavel pode receber.
+    - Podem ser do tipo 'completos' ou de tipo 'incompletos'.
+
+        Completo: Tamanho fixo e, em alguns casos, pré-definidos.
+        Incompleto: possui o seu tipo definido e seu tamanho é variavel.
+
+Variável
+  - É um espaço na memória a qual damos o nome e é possivel armazenar um valor ou uma expressão.
+  - O valor de uma variável é armazenado somente enquanto o programa é executado.
+
+    DATA -> Comando BAP para criar uma variável
+
+Constantes
+  - É um espaço na memória a qual damos o nome e armazenamos um valor que não pode ser alterado.
+  - O valor de uma constante também é armazenado somente enquanto o programa é executado.
+
+  CONSTANTS -> Comando ABAP para criar uma Constante.
+
+Parâmetros de Entrada
+  - É uma interface que criamos para o usuário, onde ele vai inserir informações para serem processadas.
+
+    PARAMETER -> Permite que o usuário coloquie apenas uma informação para ser processada.
+    SELECT-OPTIONS -> é inserido um intervalo de valores(range)
+
+
   
