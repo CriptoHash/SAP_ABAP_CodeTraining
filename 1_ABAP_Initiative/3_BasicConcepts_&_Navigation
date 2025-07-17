@@ -1,0 +1,18 @@
+Pacote & Request
+
+  Pacote:
+    Separação dos objetos dentro do SAP
+
+  Request:
+    É uma sequência alfanumerica que armazena informações de objetos criados e alterados .
+
+      WorkBench -> ABAP
+      Customize -> Parametrizações
+
+Padrão de Nomenclatura
+
+  Conceito:
+    - Padrão de Codificação. Um padrão quie escreve várias convenções de codificação usadas para implementações inteligíveis, consistentes e com qualidade.
+    - O uso de um padrão de codificação é uma prática de desenvolvimento de software extensamente aceita.
+
+  
