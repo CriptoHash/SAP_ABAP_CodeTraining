@@ -1,0 +1,48 @@
+Tipos de Variáveis
+    - Elementos de Dados
+        - Objeto que descreve o tipo de dados e significado semântico de um campo da tabela.
+
+    - Domínio
+        - Define intervalos de valores válidos para os campos.
+        - Campos semelhantes podem ser agrupados em um domíniuo.
+        - Mudar esse domínio muda todos os campos.
+
+    - Tipos de Dados Padrão
+        - i: integer 4 byte número inteiro + / - 2,1 bilhões.
+        - f: float 8 bytes, 15-16 dígitos significativos.
+        - c: string de até 65 mil caracteres.
+        - n: numeric string até 65 mil caracteres( número não-matemático).
+        - string: de comprimento dinâmico até 2 GB de comprimento.
+        - xstring: hex string sequêncial de byte comprimento dinâmico.
+        - x: byte sequêncial de até 65k bytes.
+        - d: data 8 caracteres de formato AAAAMMDD.
+        - t: tempo 6 caracteres de HHMMSS.
+        - p: packed number preciso ou número flutuante de até 16 bytes
+
+Declarando (exemplos de aplicação)
+
+    Data - Declarar suas próprias variáveis ou atributos de instância de classes.
+    Sintaxe: DATA var [{TYPE type}|{LIKE dobj}]...
+    Exemplo: DATA lv_cep TYPE c LENGTH 10.
+
+Diferenças: DATA x TYPES x TYPE x LIKE
+  - DATA: Declara variáveis e tabém tabelas internas.
+  - TYPE: Define a variável, de que tipo ela será. Quando criado, nenhuma memória é alocada.
+  - TYPES: Cria estrutura e a memória é alocada assim que é definida.
+  - LIKE: É usado para se referir a variáveis locais, tabelas.
+
+    Diferenças: DATA x TYPES
+      - DATA: Cria em formato individual.
+      - TYPE: Define variaveis de maneira coletiva.
+
+    Diferenças: TYPE x LIKE
+      - TYPE: Geralmente utilizado para referenciar um DATA TYPE existente(elementar/string/inteiro por exemplo).
+      - LIKE: Geralmente utilizado para declarar dados com referência a DATA OBJECTS existentes dentro do seu código(local) ou fora de(global).
+
+Diferenças: Estrutura x Tabela Interna
+    - Estrutura: São objetos de dados estruturados de um tipo de estrutura simples, podendo ser uma linha de tabela interna.
+    - Tabela Interna: As tabelas internas fornecem um meio selecionar dados a partir de uma estrutura fixa e armazená-la na memória de trabalho em ABAP.
+        - Os dados são armazenados linha por linha na memória, e cada linha possui a mesma estrutura .
+        - Em ABAP, tabelas internas cumprem a função de matrizes.
+
+  
