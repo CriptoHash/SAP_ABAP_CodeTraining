@@ -1,0 +1,18 @@
+DMF:
+    Data Manipulation Language:
+        - Linguagem de manipulação de dados.
+        - São os comandos que interagem com os dados dentro das tabelas.
+        - São comandos DML: Insert. Delet e Updade.
+        
+DDL:
+    Data Definition Language:
+        - Linguagem de Definição de Dados.
+        - Sãos os comandos que interagem com os objetos do banco.
+        - São comandos DLL: Create, Alter e Drop.
+
+DQL:
+    Data Query Language
+        - Linguagem de Consulta de Dados.
+        - São os comandos de consulta.
+        - Comandos DQL: Select (é o comando de consulta)
+        - Em alguns livros o SELECT fica na DML e em outros tem esse grupo próprio.
