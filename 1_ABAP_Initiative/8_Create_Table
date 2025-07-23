@@ -1,0 +1,24 @@
+Para criar uma Tabela usamos a Tx: SE11
+
+  Inserir o nome da tabela, descrição,  e informações requeridas, ex:
+       - Tabela: ZTMMUSER00_EX04
+       - Descrição: Tabela de Exemplo ABAP user Lunardi
+       - Classe de Entrega: A (Tabela de aplicação{dados mestre e de movimento})
+       - Data Browser/atualiz.visão tabs.: Exibição/atualização permitida com restrição
+
+  Campos (insirir os campos que deve conter nessa tabela, juntamente com o tipo de objetos):
+      - MANDT      /  (Chv)  / "sempre utilizar essa campo"
+      - MATRICULA  /  (Chv)  / "criar um elemento de dados"
+      - Nome       / "criar um elemento de dados"
+      - DataNascimento  / "criar um elemento de dados"
+      - RG          /   "criar um elemento de dados"
+      - CPF         /   "criar um elemento de dados"
+      - Sexo        / "criar um elemento de dados"
+
+  Após configurar os campos e dominios de dados corretamente, ative a tabela.
+    > quando ativar o SAP irá solicitar "Parâmentros de memória lógicos"
+      > - Categoria de Dados: APPL0 / Dados mestre, tabelas transparentes
+      > - Ctg.Tamanho: 0 (tamanho dos registros esperados, no caso de estudo utilizar "0")
+  
+      
+       
