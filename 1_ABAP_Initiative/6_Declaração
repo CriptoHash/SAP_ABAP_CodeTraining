@@ -2,6 +2,16 @@ Tipos de Variáveis
     - Elementos de Dados
         - Objeto que descreve o tipo de dados e significado semântico de um campo da tabela.
 
+    - Tabela
+        - São objetos de banco de dados que contêm todos os dados em um banco de dados.
+        - Nela os dados são organizados de maneira lógica em formato de linhas e colunas, igual uma planilha tipo excel.
+        - Cada tem  representa um registro exclusivo e cada coluna representa um campo no registro.
+
+    - Tabela Interna
+        - Não pode ser compartilhado entre processos e não é persistente.
+        - Os dados são armazenados na memória e uma vez finalizado o programa, os dados da tabela são perdidos.
+
+
     - Domínio
         - Define intervalos de valores válidos para os campos.
         - Campos semelhantes podem ser agrupados em um domíniuo.
