@@ -1,0 +1,101 @@
+Instruções de Comparação - IF & CASE
+
+    IF: Devemos utilizar quando queremos realizar uma série de verificações distintas.
+        - A construção IF é uma das caracteristicas mais importantes de muitas linguagens tais como o ABAP.
+        - Ela permite a execução condicional de fragmentos de código.
+        
+        IF <condição>
+            Execute alguma coisa
+        ELSEIF <condição>
+            Execute alguma coisa
+        ELSE <condição>
+            Execute alguma coisa
+        ENDIF.
+
+    Exemplos:
+        IF <Torce para Palmeiras>
+            Entre pela ala Sul
+        ELSEIF <Torce para o Flamengo>
+            Entre pela ala Norte
+        ELSE <VIP>
+            Entre pela entreda VIP
+        ENDIF.
+
+  CASE: Devemos utilizar quando queremos comparar a mesma variável ou expressão com várias opções.
+        - A instrução CASE é similar a uma série de instruções IF sobre a mesma expressão.
+        - Em muitas ocasiões, voce pode querer comparar a mesma variável (ou expressão) com muitos valores diferentes, executando uma peça diferente do código dependendo de qual valor ele se encaixar.
+
+        CASE <condição>
+            WHEN 1
+              <condição 1>
+            WHEN 2
+              <condição 2>
+            WHEN OTHERS
+              <condição 3>
+        ENDCASE.
+
+  Exemplos:
+        CASE andar
+            WHEN 1
+              Para no 1º Andar
+            WHEN 2
+              Para no 2º Andar
+            WHEN OTHERS
+              Para no 3º Andar
+        ENDCASE.
+
+Exemplo Pratico: Criando Programa para aprendermos comandos novos.
+
+    Copiar ZRMMUSERXX_EX06
+
+    Inserir TX: SE38
+        >> inserir programa ZRMMUSERXX_EX01
+            >> Programa >> Copiar >> Ajustar o programa orinem para: ZRMMUSERXX_EX06 
+            >> Selecionar todas as opções
+            >> Inserir seu pacote
+            >> Salvar
+            >> Inserir a request
+            >> exibir e depois em modificar
+
+            
+REPORT ZRMMUSER00_EX06
+
+PARAMETER: 	p_torc TYPE char1,
+			p_andar TYPE char1
+			
+DATA: 	lv_torcedor TYPE char1.
+		lv_andar TYPE char1.
+
+lv_torcedor = p_torc.
+lv_andar	= p_andar.
+
+* 'P' = Palmeiras
+* 'F' = Flamengo
+
+IF lv_torcedor = 'P'.
+	WRITE: / 'Entrada pela ala Sul'.
+ELSEIF lv_torcedor = 'F'
+	WRITE: / 'Entrada pela ala Norte'.
+ELSE.
+	WRITE: / 'Entrada pela area VIP'.
+ENDIF
+
+CASE lv_andar.
+	WHEN 1.
+		WRITE: / 'ANDAR 1'.
+	WHEN 2.
+		WRITE: / 'ANDAR 2'.
+	WHEN OTHERS.
+		WRITE: / 'ANDAR 3'.
+ENDCASE.
+
+* Ir para elementos de texto e inserir os nomes dos campos(objetos)            
+        
+        
+
+    
+
+    
+
+      
+      
