@@ -1,0 +1,50 @@
+Manutenção de Tabelas
+
+    - Essa manutenção de tabelas, em regra é uma transação de população de dados de uma determinada tabela.
+    - Para popular uma tabela, não é necessário criar um programa report ou module pool ou qualquer tipo de programa ABAP.
+    - Simplesmente criar uma manutenção de tabela. 
+
+    Após a criação de uma tabela, Cliente no menu: Utilitarios >> Gerador de atualização de tabela.
+
+Nesta Aula Veremos:
+
+  SM30 -> Atualizar a Tabela/Visão
+  SE80 -> Criar Grupo de Funções (apenas)
+  SE93 -> Criar Transação
+
+Vamos Criar uma SM30 com Transaçãop para Tabela: ZTMMUSERXX_EX04
+
+  Acessar SE11  >> Inserir Tabela acima(ou referente) >> Exibir >> Utilitarios >> Gerador de atualização de tabela.
+      - Obs1: Na aba "Entrega e atualização" selecionar Data Browser/atualiz.visão tabs. = X Exibição/atualização permitida.
+      - Obs2: Se não funcionar a modificação acima e continuar dando warnning, ir em:
+          - Utilitarios >> Categoria e ampliação >> Selecionar "Não ampliavel" >> e depois ativar novamente a tabela
+
+    - Preencher:
+        - Grupo de autorizações: "&NC&"
+        - Grupo de funções: [criar grupo de funções(SE80)]:
+            - Após criado inserir: ZGRUPO00
+        - Codigo de Ajuste: Ajustavel automaticamente
+        
+    - Após não verificar erros clicar em Criar
+
+            Grupo de Funções: SE80
+              - Selecionar Grupos de Funções >>
+                  - Inserir Grupos de funções: ZGRUPO00 (vai retornar que esse grupo nao existe e se deseja criar objeto, responder SIM).
+                      - Inserir descrição, ex: Grupo de Função de Tabelas ZGRUPO00.
+                      - Ativar esse Grupo de Função: Clicar com direito na pasta e selecionar 'Ativar'
+
+    - Associar a Tabela em SM30: SE93
+        Código de Transação: ZTMM00 (ex criado);
+            - Selecionar: Transação com Parâmetros.
+        - Em valor proposto inserir em Transação: SM30
+        - Tela: 1000
+        - Classificação: Transação Professional User
+        - Capacidade GUI: Flegar as 3 opções (para HTML/Java/Windows)
+        - Vals.propostos: Inserir: 
+              - Nome = VIEWNAME; Valor = ZTMMUSERXX_EX04
+              - Nome = UPDATE; Valor = X
+                  - Salvar
+              
+            
+                  
+
