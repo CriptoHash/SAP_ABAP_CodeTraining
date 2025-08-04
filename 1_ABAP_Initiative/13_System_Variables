@@ -1,0 +1,39 @@
+Variáveis de Sistemas:
+  
+  O que são:
+    - A SAP disponibiliza dados globais que podem ser acessados a qualquer momento quando chamamos em nosso código ABAP.
+    - E isso é o que chamamos de Variáveis de Sistema.
+    - Os valores nesses campos indicam o estado do sistema em um determinado momento, ou seja, em tempo e execução.
+
+  Como acessar?
+    - Voce pode encontrar a lista completa de variáveis do istema na tabela SYST no SAP através de SE11.
+    - Campos individuais da estrutura SYST podem ser acessados usando "SYST-" ou "SY-".
+
+        Exemplo de algumas variáveis:
+
+          SY-UNAME:
+            - Retorna o nome do usuário logado no sistema.
+          SY-LANGU:
+            - Retorna o idioma selecionado no logon.
+          SY-DATUM:
+            - Retorna a data atual do sistema.
+          SY-UZEIT:
+            - Retorna a hora atual do sistema.
+          SY-UCOMM:
+            - Retorna o nome do botão que o usuário clicou na barra de pressionado.
+           SY-SUBRC:
+            - Informações do resultado de condição anterior.
+          SY-TABIX:
+            - Indica posição da linha dentro da tabela interna.
+          SY-TCODE:
+            - Qual transação o usuario se encontra.
+          SY-ULINE:
+            - Cria uma linha horizontal.
+          SY-VLINE:
+            - Cria uma linha vertical, mais utilizado para relatórios com exibição write.
+          
+
+        
+        
+    
+    
