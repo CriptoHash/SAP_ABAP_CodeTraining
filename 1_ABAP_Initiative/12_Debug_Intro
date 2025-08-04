@@ -1,0 +1,19 @@
+DEBUG - Introdução
+
+O que é Debug?
+    - Também chamado de debugging ou em português: depuração, que é o nome dado ao processo de encontrar e remover os erros que podem acometer softwares e hardwares.
+
+Bug
+    - O termo "bug" foi criado por Grace Hopper, ela estaria tentando encontrar o problema em seu computador, até que descobriu que era causado por um inseto morto.
+    - Aí teria surgido o termo, visto que bug é inseto em inglês.
+
+Qual a função do Debug
+    - Seu objetivo é encontrar erros que podem impedir que os códigos funcionem adequadamente.
+    - Com ele, é possível determinar o que está ocorrendo dentro do código-fonte e obter sugestões de ações de melhorias.
+    - Ou, ainda, acompanhar o conteúdo de uma determinada variável. Tudo isso serve pra facilitar o trabalho cansativo de encontrar o bug em seu sistema.
+
+        - Para iniciar o Debug no ABAP só usar o famoso "/h"
+
+Importância do Debug
+    - O Debug melhora a gestão de tempo e produtividade do profissional.
+    - Pois, Corrigir bugs manualmente pode ser uma tarefa demorada e frustrante.
