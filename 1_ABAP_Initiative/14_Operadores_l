@@ -1,0 +1,73 @@
+Operadores l
+
+  Operadores Simples
+
+  Operador   / Significado   / Obs:
+    EQ       / Igual           / =
+    NE       / Diferente       / <> ><
+    GT       / Maior que       / >
+    GE       / Maior igual a   / >= =>
+    LT       / Menor que       / <
+    LE       / Menor igual a   / <= =<
+    OR       / Lógico Ou
+    AND      / Lógico E
+    BETWEEN  / Intervalo
+    IS INITIAL/ É vazio
+    NOT      / Negação
+
+
+Criando uma Tabela: ZTMMUSER00_EX08
+Exercicio 08 - Operadores 1
+
+REPORT ZRMMUSER00_EX08.
+
+PARAMETER:  p_v1 TYPE i,
+            p_ve TYPE i.
+
+DATA:   adicao         TYPE i,
+        subtracao      TYPE i.
+        multiplicacao  TYPE i,
+        divisao        TYPE p DECIMALS 2.
+
+adicao        = p_v1 + p_v2.
+subtracao     = p_v1 - p_v2.
+multiplicacao = p_v1 * p_v2.
+* divisao       = p_v1 / p_v2.
+
+
+WRITE:   / 'Adição: ', adicao,
+         / 'Subtração: ', subtracao,
+         / 'Multiplicação: ' multiplicacao,
+IF p_v2 <> 0.
+  divisao       = p_v1 / p_v2.
+    WRITE: 'Divisão: ', divisao.
+  ELSE.
+    WRITE: / 'Divisão por 0 não existe.'.
+ENDIF.
+
+* lv_torcedoir = p_torce.
+* lv_andar     = p_andar.
+
+*  IF lv_torcedor = "F".
+*    WRITE: / 'Entrada pelo Setor Sul'.
+*  ELSEIF lv_torcedor = "V".
+*    WRITE: / 'Entrada pelo Setor Norte'.
+*  ELSE.
+*    WRITE: / 'Entrada pelo Setor VIP'.
+  
+*  CASE lv_andar.
+*  	WHEN 1.
+*  		WRITE: / 'ANDAR 1'.
+*  	WHEN 2.
+*  		WRITE: / 'ANDAR 2'.
+*  	WHEN OTHERS.
+*  		WRITE: / 'ANDAR 3'.
+
+
+
+
+
+
+
+
+    
