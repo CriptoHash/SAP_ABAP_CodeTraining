@@ -1,0 +1,103 @@
+Exemplos de Operadores
+
+---------- Exemplo 01:
+
+        IF lv_texto1 EQ 'Texto1' AND lv_texto2 EQ 'Texto2'.
+          WRITE 'Entrou no IF'.
+        ELSE.
+          WRITE ' Não entrou no IF'.
+        ENDIF.
+
+REPORT ZRMMUSER00_EX09.
+
+DATA:  lv_texto1 TYPE znome00,
+        lv_texto2 TYPE znome00,
+        lv_valor1 TYPE i,
+        lv_valor2 TYPE i.
+
+lv_texto1 = 'Texto1'.
+lv_texto2 = 'Texto2'.
+
+IF lv_texto1 EQ 'Texto1' AND lv_texto2 EQ 'Texto2'.
+  WRITE 'Entrou no IF'.
+ELSE.
+  WRITE 'Não entrou no IF'.
+ENDIF.
+
+
+---------- Exemplo 02:
+
+    IF lv_texto1 NE 'Texto1' OR lv_texto2 NE 'Texto2'.
+          WRITE 'Entrou no IF'.
+        ELSE.
+          WRITE ' Não entrou no IF'.
+        ENDIF.
+
+REPORT ZRMMUSER00_EX10.
+
+DATA:  lv_texto1 TYPE znome00,
+        lv_texto2 TYPE znome00,
+        lv_valor1 TYPE i,
+        lv_valor2 TYPE i.
+
+lv_texto1 = 'Texto1'.
+lv_texto2 = 'Texto2'.
+
+IF lv_texto1 NE 'Texto1' OR lv_texto2 NE 'Texto2'.
+    WRITE 'Entrou no IF'.
+ELSE.
+    WRITE ' Não entrou no IF'.
+ENDIF.
+
+
+---------- Exemplo 03:
+
+    IF lv_val1 GT 15.
+          WRITE 'É maior do que 15'.
+        ELSE.
+          WRITE 'Não é maior que 15'.
+        ENDIF.
+
+REPORT ZRMMUSER00_EX11.
+
+DATA:  lv_texto1 TYPE znome00,
+        lv_texto2 TYPE znome00,
+        lv_val1 TYPE i,
+        lv_valor2 TYPE i.
+
+lv_texto1 = 'Texto1'.
+lv_texto2 = 'Texto2'.
+lv_val1 = 14.
+
+IF lv_val1 GT 15.
+*IF lv_val1 >= 15.
+*IF lv_val1 = 15.
+*IF lv_val1 LT 15.
+*IF lv_val1 LE 15.
+*IF lv_val1 GE 15.
+          WRITE 'É maior do que 15'.
+        ELSE.
+          WRITE 'Não é maior que 15'.
+        ENDIF.
+
+
+---------- Exemplo 04:
+
+    BETWEEN
+
+REPORT ZRMMUSER00_EX11.
+
+DATA:  lv_texto1 TYPE znome00,
+        lv_texto2 TYPE znome00,
+        lv_val1 TYPE i,
+        lv_valor2 TYPE i.
+
+lv_texto1 = 'Texto1'.
+lv_texto2 = 'Texto2'.
+lv_val1 = 9.
+
+IF lv_val1 BETWEEN 1 AND 5.
+          WRITE 'Está entre 1 e 5'.
+        ELSE.
+          WRITE 'Não esta entre 1 e 5'.
+        ENDIF.
