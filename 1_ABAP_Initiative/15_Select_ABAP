@@ -1,0 +1,38 @@
+Comandos SQL
+
+  DML 
+    - Data Manipulation Language.
+    - São Comandos que interagem com os dados dentro das tabela.
+    - Comandos DML: Insert, Delet e Update.
+
+  DDL
+    - Data Definition Language.
+    - São comandos que interagem com os objetos do banco.
+    - Comandos DDL: Create, Alter e Drop
+
+--- Exemplo 01
+
+SELECT * From TABELA01 INTO WA_TABELA01.
+  WRITE:/ WA_TABELA01-CAMPO01,
+          WA_TABELA01-CAMPO02.
+ENDSELECT.
+
+IF SY-SUBRC NE 0.
+    WRITE: 'Não há dados na Tabela'.
+ENDIF.
+
+--- Exemplo 02
+
+SELECT * From TABELA01 INTO TI_TABELA01.
+
+SELECT * FROM TABELA01 INTO CORRESPONDING FIELDS OF TABLE TI_TABELA01.
+
+--- Exemplo 03
+
+SELECT SINGLE COLLUM FROM TABELA01 INTO TI_TABELA01.
+
+SELECT SINGLE * FROM TABELA01 INTO CORRESPONDING FIELDS OF TABLE TI_TABELA01.
+
+
+
+
