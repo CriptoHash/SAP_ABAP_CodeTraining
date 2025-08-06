@@ -1,0 +1,15 @@
+Para criar um novo pacote acessar a Transação:
+  - SE80
+  - Um pacote pode ser o local para armazenar os objetos (ex: pasta do sistema)
+
+    - Selecionar o Pacote
+      - Inserir o nome do novo pacote, ex: ZCURSO
+      - Inserir a descrição do pacote, ex: Objetos do Curso
+
+    Salvar na Request: Ex: NPLK900085
+      - Pode-ser criar uma nova request.
+      - Uma request (codigo alfanumerico) salva todas as suas alterações no ambiente, para depois ser transportadas a outros ambientes.
+
+    A partir deste ponto, pode ser criar um programa ou objetos e adicionar dentro deste pacote.
+
+
