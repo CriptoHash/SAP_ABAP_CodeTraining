@@ -1,0 +1,39 @@
+Exemplo de Programa com identação e comentário.
+
+Identação:
+    - É o recuo no início de uma linha de código ou texto, usado para organizar e estruturar visualmente, indicando hierarquia ou blocos, como em programação.
+
+Comentários: 
+    - São usados para explicar, documentar, realizar manutenção e depuração do código, sem afetar sua execução.
+    - Existem dois tipos:
+        - Comentário de linha: Inicia com * no início da linha, comentando toda ela.
+        - Comentário inline: Inicia com " após o código, comentando o restante da linha.
+
+  Criando um programa: SE38
+    - Programa: ZCURSO_002
+    - Title: Exibe um programa de uma tabela com identação e comentários.
+
+----- Exercicio:
+
+
+* Autor Paulo Lunardi
+* Criado em 06/08/2025
+*
+
+REPORT Z CURSO_002.
+
+START-OF-SELECTION.
+  DATA: lv_data TYPE STANDARD TABLE OF saplane.
+  DATA: ls_data TYPE saplane.
+
+  " Consultando Dados
+  SELECT * " Campos da Tabela
+    INTO TABLE lt_data " Tabela interna que recebe o resultado da consulta
+    FROM saplane.
+
+* Escrevendo informações na tela
+  LOOP AT lt_data INTO ls_data.
+    WRITE ls_data-planetype.
+    WRITE ls_data-producer.
+    NEW-LINE.
+  ENDLOOP.
