@@ -1,0 +1,19 @@
+Para criar um programa acessamos a transação:
+    - SE38
+
+Inserir o nome do programa.
+    - Obs: Lembrar da nomenclatura que não são oficiais SAP começam com 'z' ou 'y'
+
+  Nome Programa: ZCURSO_001
+    Title: Programa que exibe texto Hello World
+    Type: Executable Program (1) 'apelidado de report por devs'
+
+      - Salvar: Selecionar o pacote
+          - Obs: Pacote serve para armazenar objetos locais
+            - Posteriormente pode ser compartilhado com outros ambientes
+
+------ Exemplo:
+
+REPORT ZCURSO_001.
+WRITE 'HELLO WORLD'.
+
