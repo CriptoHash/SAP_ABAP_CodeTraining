@@ -1,16 +1,16 @@
-ZTMMUSER00_EX05
+*ZTMMUSER00_EX05
 
 * Criando um programa que vai inserior dados em uma Tabela
 * Programa ZRMMUSER00_EX05 
 
-No SAP acessar a Tx: SE38
-	-> Inserir o codigo do programa
-	-> Tipo(Ex): Castro de Funcionarios	
-	-> Tipo: 1 Programa executavel
-	-> Verifs.unicode ativas: Flag ativo
-	-> Aritmética em ponto fixo: Flag ativo 
+*No SAP acessar a Tx: SE38
+*	-> Inserir o codigo do programa
+*	-> Tipo(Ex): Castro de Funcionarios	
+*	-> Tipo: 1 Programa executavel
+*	-> Verifs.unicode ativas: Flag ativo
+*	-> Aritmética em ponto fixo: Flag ativo 
 	
-		-> GRAVAR REQUEST E CRIAR PACOTE 
+*		-> GRAVAR REQUEST E CRIAR PACOTE 
 
 		
 REPORT	ZRMMUSER00_EX05
