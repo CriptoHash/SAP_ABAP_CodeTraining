@@ -1,0 +1,30 @@
+Request serve para registras todas as modificações em objetos no ambiente:
+    - Geralmente voce tranfere a request criada em DEV para o ambiente de teste.
+
+Criando uma Request
+
+    - Primeiro criamos um programa: SE38
+        Program: ZCURSO_TEST1
+    - Podemos criar uma nova ou utilizar uma existente
+        - Inserir descrição
+        - Inserir o Target
+
+Conferindo a Request:
+
+    - Acessar a transação: SE10
+      - Selecionar usuário e clicar em display.
+      - Para ver as requests de todo os usuarios so colocar '*' na caixa de pesquisa.
+
+    Request Type
+      - Customizing Requests: 
+          - São requests de customizações, utilizadas por funcionais.
+      - Workbench Requests: 
+          - São requests utilizadas por desenvolvedores ABAPs
+      - transports of Copies:
+          - Utilizadas para enviar ajustes para QAS, apenas copia da request(não é definitivo).
+      - Relocations: Não explicado (disse que não utiliza-se).
+
+    Request Status
+      - Modifiable: Modificavel, quando se cria uma request e continua se adicionando objetos na request.
+      - Released: Liberada, não quer mais colocar ou mexer nesses objetos, ja terminou os ajustes.
+    
