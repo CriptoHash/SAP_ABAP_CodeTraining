@@ -10,15 +10,17 @@ SELECTION-SCREEM END OF BLOCK b1.
 
 START-OF-SELECTION.
   DATA ld_media(12) TYPE p DECIMALS 2.
+  DATA ld_mensagem TYPE string
 
   ld_media = ( p_1bim + p_2bim + p_3bim + p_4bim ) / 4.
 
 * 1ª Resolução 
-*  IF ld_media < 60.
-*    WRITE: 'Sua média anual foi de ' , ld_media , ', você foi reprovado!'.
-*  ELSE.
-*    WRITE: 'Sua média anual foi de ' , ld_media , ', você foi aprovado, Parabéns!'.
-*  END IF.
+*    IF ld_media < 60.
+*     ld_mensagem = |Sua média anual foi de ' , ld_media , ', você foi reprovado!|.
+*    ELSE.
+*      ld_mensagem = |Sua média anual foi de ' , ld_media , ', você foi aprovado, Parabéns!|.
+*    END IF.
+*    WRITE ld_mensagem.
 
 * 2ª Resolução 
   IF ld_media >= 0 AND ld_media <= 50.
