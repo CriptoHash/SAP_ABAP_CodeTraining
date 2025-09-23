@@ -1,0 +1,111 @@
+Report ZCURSO_0024_FIELDSYMBOL.
+
+* FIELDSYMBOL REFERENCIA UMA VARIÁVEL.
+* OU SEJA ELE APONTA PARA UMA VARIÁVEL.
+* TODA ALTERAÇÃO QUE FIZER NO FIELD-SYMBOLS ALTERA NA VARIÁVEL E VICE-VERSA.
+
+DATA ld_text TYPE char100.
+
+* FIELD-SYMBOLS COM VARIVEIS SIMPLES
+DATA ld_number TYPE I.
+
+ld_text = 'Teste'.
+ld_number = 2'.
+
+FIELD-SYMBOLS <ld_text> TYPE char100.
+FIELD-SYMBOLS <ld_number> TYPE 2.
+
+" PARA VERIFICAR SE O FIELDSYMBOL TEM UMA REFERENCIA
+IF <ld_text> IS ASSIGNED.	
+	WRITE 'Tem referência'.
+ELSE.
+	WRITE 'Não tem referência'.
+ENDIF.
+
+
+ASSIGN ld_text TO <ld_text>.
+ASSIGN ld_number TO <ld_number>.
+
+" LIMPAR UMA REFERENCIA
+UNASSIGN <ld_text>.
+
+* FIELD-SYMBOLS COM VARIVEIS COM ESTRUTURAS
+
+Report ZCURSO_0024_FIELDSYMBOL_V2.
+
+DATA: ls_scarr TYPE scarr.
+
+FIELD-SYMBOLS: <ls_scarr> TYPE scarr.
+
+ls_scarr-carrid = 1.
+ls_scarr-carname = 'Teste'.
+
+ASSIGN ls_scarr TO <ls_scarr>.
+
+
+* FIELD-SYMBOLS COM VARIVEIS COM TABELAS
+
+Report ZCURSO_0024_FIELDSYMBOL_V3.
+
+DATA: ls_scarr TYPE STANDARD TABLE OF scarr.
+DATA: ls_scarr TYPE scarr.
+
+FIELD-SYMBOLS: <ls_scarr> TYPE scarr.
+
+ASSIGN ls_scarr TO <ls_scarr>.
+
+SELECT *
+	FROM scarr
+	INTO TABLE lt_scarr.
+	
+LOOP AT lt_scarr ASSIGNING <ls_scarr>.
+	WRITE <ls_scarr>-carname.
+ENDLOOP.
+
+
+* FIELD-SYMBOLS COM VARIVEIS DINÂMICAS
+
+Report ZCURSO_0024_FIELDSYMBOL_V4.
+
+DATA ld_text TYPE char100.
+DATA ld_varname TYPE char100.
+
+FIELD-SYMBOLS <ld_text> TYPE char100.
+
+ld_text = 'Teste'.
+ld_varname = 'ld_text'.
+
+ASSIGN (ld_varname)	TO <ld_text>.
+
+" OU SEJA TEMOS 3 MANEIRAS POSSIVEIS DE PASSAR O FIELD-SYMBOLS COMO VARIAVEIS, EX:
+ASSIGN ld_text		TO <ld_text>. " VARIÁVEL DIRETA
+ASSIGN (ld_varname)	TO <ld_text>. " VARIÁVEL DENTRO DE OUTRA VARIAVEL
+ASSIGN ('ld_text')	TO <ld_text>. " VARIÁVEL COM STRING DIRETA
+
+
+* FIELD-SYMBOLS COM VARIVEIS DINÂMICAS EM OUTROS PROGRAMAS
+
+Report ZCURSO_0024_FIELDSYMBOL_V5.
+
+DATA ld_text TYPE char100.
+DATA ld_varname TYPE char100.
+
+FIELD-SYMBOLS <ld_text> TYPE char100.
+
+ld_text = 'Teste'.
+ld_varname = '(ZCURSO_0024_FIELDSYMBOL_V2)ld_text'.
+
+ASSIGN (ld_varname) TO <ld_text>.
+
+
+* INSERT INITIAL LINE INTO TABLE lt_scarr ASSIGNING <ls_scarr>.
+
+Report ZCURSO_0024_FIELDSYMBOL_V6.
+
+DATA ld_scarr TYPE STANDARD TABLE OF scarr.
+
+FIELD-SYMBOLS <ls_scarr> TYPE scarr.
+
+"INSERE UMA LINHA NA TABELA E JA INCLUI REFERENCIA(CASO EXISTA) NO FIELD-SYMBOL.
+INSERT INITIAL LINE INTO TABLE lt_scarr ASSIGNING <ls_scarr>. 
+
