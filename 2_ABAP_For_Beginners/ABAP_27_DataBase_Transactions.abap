@@ -2,6 +2,7 @@ REPORT ZCURSO_SQL_TRANSACTION.
 
 * Transações de Banco de Dados.
 " São Pacotes que enviados para que possa ser realizado os ajustes no banco.
+* OBS: não usar COMMIT WORK ou ROLLBACK WORK dentro do standart
 
 DATA: ls_header TYPE zcurso_so_header.
 DATA: ls_item TYPE zcurso_so_item.
